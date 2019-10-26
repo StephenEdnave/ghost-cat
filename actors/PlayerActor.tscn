@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://actors/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://actors/PlayerActor.gd" type="Script" id=2]
@@ -6,17 +6,19 @@
 [ext_resource path="res://actors/states/Transparent.gd" type="Script" id=4]
 [ext_resource path="res://actors/states/Walk.gd" type="Script" id=5]
 [ext_resource path="res://assets/sprites/Whisper-Idle.png" type="Texture" id=6]
-[ext_resource path="res://core/ObjectPickup.gd" type="Script" id=7]
+[ext_resource path="res://core/ObjectInteraction.gd" type="Script" id=7]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=1]
+resource_local_to_scene = true
+extents = Vector2( 25.2755, 27.702 )
+
+[sub_resource type="CircleShape2D" id=2]
 radius = 49.7939
 
-[sub_resource type="Animation" id=2]
-resource_name = "SETUP"
+[sub_resource type="Animation" id=3]
 length = 0.001
 
-[sub_resource type="Animation" id=3]
-resource_name = "idle"
+[sub_resource type="Animation" id=4]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -68,6 +70,9 @@ tracks/3/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
+[sub_resource type="CircleShape2D" id=5]
+radius = 28.3628
+
 [node name="PlayerActor" groups=[
 "players",
 ] instance=ExtResource( 1 )]
@@ -86,21 +91,35 @@ next_state = "Idle"
 script = ExtResource( 5 )
 animation = "idle"
 
+[node name="Pivot" parent="." index="1"]
+editor/display_folded = true
+
 [node name="Sprite" parent="Pivot" index="0"]
 scale = Vector2( 2, 2 )
 texture = ExtResource( 6 )
 hframes = 4
 
-[node name="ObjectPickup" type="Area2D" parent="." index="3"]
+[node name="CollisionShape2D" parent="." index="2"]
+shape = SubResource( 1 )
+
+[node name="ObjectInteraction" type="Area2D" parent="." index="3"]
+editor/display_folded = true
 position = Vector2( 28.2666, 11.5791 )
 collision_layer = 0
 collision_mask = 4
 script = ExtResource( 7 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPickup" index="0"]
-shape = SubResource( 1 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectInteraction" index="0"]
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
-anims/SETUP = SubResource( 2 )
-anims/idle = SubResource( 3 )
+anims/SETUP = SubResource( 3 )
+anims/idle = SubResource( 4 )
+
+[node name="Hurtbox" type="Area2D" parent="." index="5"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" index="0"]
+shape = SubResource( 5 )
 

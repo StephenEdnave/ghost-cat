@@ -1,2 +1,2 @@
-extends Area2D
+extends InteractableObject
 class_name PickableObject
