@@ -1,13 +1,16 @@
 extends Node2D
+class_name Level
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var y_sort := $YSort
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func initialize() -> void:
+	for object in y_sort.get_children():
+		if object is Actor:
+			object.initialize()
+
+
+func spawn_player(player, spawn_number:=0) -> void:
+	var spawn_point = $PlayerSpawnPoints.get_child(spawn_number)
+	y_sort.add_child(player)
+	player.global_position = spawn_point.global_position
