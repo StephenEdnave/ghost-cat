@@ -7,8 +7,6 @@ func _ready() -> void:
 	for state in get_children():
 		assert state is State
 		state.connect("finished", self, "change_state")
-	
-	initialize()
 
 
 func initialize() -> void:
