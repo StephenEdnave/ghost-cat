@@ -1,13 +1,22 @@
 extends Node
+class_name State
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+signal finished(next_state)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+export(String) var next_state := ""
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+func enter() -> void:
+	pass
+
+
+func exit() -> void:
+	pass
+
+
+func phy_process(delta:float) -> void:
+	pass
+
+
+func anim_finished(anim_name:String) -> void:
+	pass
