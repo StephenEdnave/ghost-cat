@@ -7,10 +7,10 @@ func pickup() -> void:
 		object = null
 	else:
 		var objects = get_overlapping_areas()
-		for object in objects:
-			if not object is PickableObject:
-				continue
-			object = objects[0]
+		for _object in objects:
+			if _object is PickableObject:
+				object = _object
+				return
 
 
 func _physics_process(delta:float) -> void:
