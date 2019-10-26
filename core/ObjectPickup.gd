@@ -7,7 +7,9 @@ func pickup() -> void:
 		object = null
 	else:
 		var objects = get_overlapping_areas()
-		if objects:
+		for object in objects:
+			if not object is PickableObject:
+				continue
 			object = objects[0]
 
 

@@ -19,3 +19,4 @@ func change(area) -> void:
 	GameManager.game.camera.change_limits(camera_limits, limits_tween_value)
 	
 	GameManager.game.camera.change_target_zoom(zoom, zoom_tween_value)
+	print("DEBUG AAAA")

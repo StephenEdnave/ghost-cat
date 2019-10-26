@@ -54,6 +54,7 @@ func _physics_process(delta : float) -> void:
 func change_target_zoom(new_target_zoom : Vector2, new_zoom_lerp_value := 0.1) -> void:
 	target_zoom = new_target_zoom
 	zoom_lerp_value = new_zoom_lerp_value
+	print(target_zoom)
 
 
 func _on_timeout() -> void:
