@@ -29,11 +29,8 @@ func _ready() -> void:
 	call_deferred("assert", owner is KinematicBody2D)
 
 
-func enter(args := {}) -> void:
-	if args.has("velocity"):
-		velocity = args["velocity"]
-	if args.has("gravity_speed"):
-		gravity_speed = args["gravity_speed"]
+func enter() -> void:
+	pass
 
 
 func exit() -> void:

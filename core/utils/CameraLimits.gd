@@ -15,8 +15,7 @@ func change(area) -> void:
 		"bottom" : limits.global_position.y + limits.shape.extents.y,
 		"top" : limits.global_position.y - limits.shape.extents.y
 	}
-	print("aaaa")
-	print(camera_limits)
+	
 	GameManager.game.camera.change_limits(camera_limits, limits_tween_value)
 	
 	GameManager.game.camera.change_target_zoom(zoom, zoom_tween_value)

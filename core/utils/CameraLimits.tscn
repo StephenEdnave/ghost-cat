@@ -3,7 +3,7 @@
 [ext_resource path="res://core/utils/CameraLimits.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 400, 200 )
+extents = Vector2( 684.409, 587.427 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 600, 600 )
@@ -26,5 +26,4 @@ shape = SubResource( 1 )
 shape = SubResource( 2 )
 disabled = true
 
-[connection signal="area_entered" from="CollisionTrigger" to="." method="_on_CollisionTrigger_area_entered"]
 [connection signal="area_entered" from="CollisionTrigger" to="." method="change"]

@@ -2,6 +2,7 @@ extends KinematicBody2D
 class_name Actor
 
 onready var animation_player := $AnimationPlayer
+onready var pivot := $Pivot
 
 func _ready() -> void:
 	assert animation_player

@@ -73,15 +73,13 @@ tracks/3/keys = {
 collision_mask = 1
 script = ExtResource( 2 )
 
-[node name="StateMachine" parent="." index="0"]
-editor/display_folded = true
-
 [node name="Idle" type="Node" parent="StateMachine" index="0"]
 script = ExtResource( 3 )
 next_state = "Walk"
 
 [node name="Walk" type="Node" parent="StateMachine" index="1"]
 script = ExtResource( 4 )
+animation = "idle"
 
 [node name="Sprite" parent="Pivot" index="0"]
 scale = Vector2( 2, 2 )
