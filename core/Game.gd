@@ -14,3 +14,10 @@ func _ready() -> void:
 	level_loader.load_level(initial_level, 0)
 	camera = camera_scene.instance()
 	level_loader.player.add_child(camera)
+	
+	level_loader.player.connect("died", self, "_on_player_died")
+
+
+func _on_player_died(actor) -> void:
+	if actor is PlayerActor:
+		get_tree().quit()

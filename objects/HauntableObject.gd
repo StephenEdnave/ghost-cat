@@ -1,2 +1,5 @@
-extends Area2D
-class_name PickableObject
+extends InteractableObject
+
+
+func interact() -> void:
+	pass
