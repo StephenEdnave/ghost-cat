@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Wood Floor.png-473188971703192f640295d9b96cdf36.stex"
+path="res://.import/Painting-Pranked.png-3b631dbf0fadc5c48eaf364171367195.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Wood Floor.png"
-dest_files=[ "res://.import/Wood Floor.png-473188971703192f640295d9b96cdf36.stex" ]
+source_file="res://assets/sprites/Painting-Pranked.png"
+dest_files=[ "res://.import/Painting-Pranked.png-3b631dbf0fadc5c48eaf364171367195.stex" ]
 
 [params]
 

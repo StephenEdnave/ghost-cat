@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Wood Floor.png-473188971703192f640295d9b96cdf36.stex"
+path="res://.import/TV-pranked.png-0eb8c4a722f6a2e96177654d2c80440d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Wood Floor.png"
-dest_files=[ "res://.import/Wood Floor.png-473188971703192f640295d9b96cdf36.stex" ]
+source_file="res://assets/sprites/TV-pranked.png"
+dest_files=[ "res://.import/TV-pranked.png-0eb8c4a722f6a2e96177654d2c80440d.stex" ]
 
 [params]
 

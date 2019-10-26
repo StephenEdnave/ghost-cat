@@ -13,4 +13,3 @@ camera_scene = ExtResource( 2 )
 [node name="LevelLoader" type="Node2D" parent="."]
 script = ExtResource( 3 )
 player_scene = ExtResource( 4 )
-

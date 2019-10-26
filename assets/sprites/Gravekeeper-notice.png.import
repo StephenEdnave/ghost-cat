@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Wood Floor.png-473188971703192f640295d9b96cdf36.stex"
+path="res://.import/Gravekeeper-notice.png-62e3f116ff657efbd68d9c3df2b204de.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Wood Floor.png"
-dest_files=[ "res://.import/Wood Floor.png-473188971703192f640295d9b96cdf36.stex" ]
+source_file="res://assets/sprites/Gravekeeper-notice.png"
+dest_files=[ "res://.import/Gravekeeper-notice.png-62e3f116ff657efbd68d9c3df2b204de.stex" ]
 
 [params]
 
