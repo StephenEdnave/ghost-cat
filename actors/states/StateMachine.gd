@@ -3,6 +3,7 @@ class_name StateMachine
 
 var current_state
 
+
 func _ready() -> void:
 	for state in get_children():
 		assert state is State
@@ -12,6 +13,10 @@ func _ready() -> void:
 func initialize() -> void:
 	current_state = get_child(0)
 	current_state.enter()
+
+
+func get_current_state():
+	return current_state
 
 
 func change_state(next_state_name:String) -> void:
