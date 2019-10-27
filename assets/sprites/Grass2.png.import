@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chair.png-5dc75114807155b6147ea3887282ddd6.stex"
+path="res://.import/Grass2.png-199d6bde2b0181e769a39c1c1229b9a3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Chair.png"
-dest_files=[ "res://.import/Chair.png-5dc75114807155b6147ea3887282ddd6.stex" ]
+source_file="res://assets/sprites/Grass2.png"
+dest_files=[ "res://.import/Grass2.png-199d6bde2b0181e769a39c1c1229b9a3.stex" ]
 
 [params]
 

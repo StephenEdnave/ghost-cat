@@ -10,16 +10,14 @@
 [ext_resource path="res://assets/sprites/Gravekeeper-notice.png" type="Texture" id=8]
 [ext_resource path="res://actors/Deathbox.gd" type="Script" id=9]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=1]
 resource_local_to_scene = true
 extents = Vector2( 25.2755, 27.702 )
 
-[sub_resource type="Animation" id=1]
-resource_name = "SETUP"
+[sub_resource type="Animation" id=2]
 length = 0.001
 
-[sub_resource type="Animation" id=2]
-resource_name = "idle"
+[sub_resource type="Animation" id=3]
 length = 0.8
 loop = true
 step = 0.4
@@ -72,8 +70,7 @@ tracks/3/keys = {
 "values": [ 0, 1 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "notice"
+[sub_resource type="Animation" id=4]
 length = 3.6
 step = 0.3
 tracks/0/type = "value"
@@ -125,7 +122,7 @@ tracks/3/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -177,7 +174,7 @@ tracks/3/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="CircleShape2D" id=5]
+[sub_resource type="CircleShape2D" id=6]
 radius = 37.9593
 
 [sub_resource type="CircleShape2D" id=7]
@@ -215,13 +212,13 @@ frame = 3
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.75103, 5.25722 )
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
-anims/SETUP = SubResource( 1 )
-anims/idle = SubResource( 2 )
-anims/notice = SubResource( 3 )
-anims/walk = SubResource( 4 )
+anims/SETUP = SubResource( 2 )
+anims/idle = SubResource( 3 )
+anims/notice = SubResource( 4 )
+anims/walk = SubResource( 5 )
 
 [node name="Deathbox" type="Area2D" parent="." index="4"]
 editor/display_folded = true
@@ -230,14 +227,13 @@ collision_mask = 2
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deathbox" index="0"]
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="FieldOfView" type="Area2D" parent="." index="5"]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FieldOfView" index="0"]
 shape = SubResource( 7 )
-
 [connection signal="area_entered" from="Deathbox" to="Deathbox" method="_on_Deathbox_area_entered"]
 [connection signal="area_entered" from="FieldOfView" to="StateMachine" method="_on_FieldOfView_area_entered"]
 [connection signal="area_exited" from="FieldOfView" to="StateMachine" method="_on_FieldOfView_area_exited"]

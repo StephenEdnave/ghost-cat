@@ -75,5 +75,4 @@ position = Vector2( 537.502, 506.085 )
 zoom = Vector2( 1.4, 1.4 )
 limits_tween_value = 0.0
 
-
 [editable path="CameraLimits"]

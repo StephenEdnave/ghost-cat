@@ -10,4 +10,3 @@ script = ExtResource( 1 )
 [node name="PlayerSpawnPoints" type="Node2D" parent="."]
 
 [node name="0" type="Position2D" parent="PlayerSpawnPoints"]
-

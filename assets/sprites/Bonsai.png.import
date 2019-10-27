@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chair.png-5dc75114807155b6147ea3887282ddd6.stex"
+path="res://.import/Bonsai.png-7319426ffc521f470b2d236e71116504.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Chair.png"
-dest_files=[ "res://.import/Chair.png-5dc75114807155b6147ea3887282ddd6.stex" ]
+source_file="res://assets/sprites/Bonsai.png"
+dest_files=[ "res://.import/Bonsai.png-7319426ffc521f470b2d236e71116504.stex" ]
 
 [params]
 
