@@ -19,4 +19,3 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="Pivot"]
 modulate = Color( 1, 0.164706, 0.164706, 1 )
 texture = ExtResource( 2 )
-
