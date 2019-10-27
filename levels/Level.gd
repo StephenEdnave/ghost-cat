@@ -3,6 +3,7 @@ class_name Level
 
 onready var y_sort := $YSort
 
+export(AudioStream) var music
 
 func initialize() -> void:
 	for object in y_sort.get_children():

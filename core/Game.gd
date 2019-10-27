@@ -16,6 +16,9 @@ func _ready() -> void:
 	level_loader.player.add_child(camera)
 	
 	level_loader.player.connect("died", self, "_on_player_died")
+	
+	$MusicPlayer.stream = level_loader.level.music
+	$MusicPlayer.play()
 
 
 func _on_player_died(actor) -> void:
